@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.15.0",
+    "antd": "^3.15.1",
     "axios": "^0.18.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
@@ -14,9 +14,10 @@
     "redux": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start --mode development",
+    "test": "react-scripts start --mode test",
+    "production": "react-scripts start --mode production",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
