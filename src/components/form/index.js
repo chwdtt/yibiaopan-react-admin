@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import {Form, Icon, Input, Button } from 'antd';
-
+import { getPubKey, loginByUsername } from '../../api/login';
 class NormalLoginForm extends Component {
-
-  handleSubmit = (e) => {
+  async handleSubmit(e) {
     e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
+    let key = await getPubKey();
   }
-
-
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
